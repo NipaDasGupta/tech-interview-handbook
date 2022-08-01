@@ -62,9 +62,8 @@ class Trie(object):
                         return True
                 return False
             else:
-                if char not in node:
-                    return False
-                return traverse(node[char], index + 1)
+                return False if char not in node else traverse(node[char], index + 1)
+
         return traverse(self.d, 0)
 
 # Example

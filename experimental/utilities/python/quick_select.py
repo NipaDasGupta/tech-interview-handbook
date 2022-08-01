@@ -7,7 +7,7 @@ def partition(array, start, end, pivot):
     This variant is useful when you want to bound your recursion depth by the
     range of the input values, and not the length of the array."""
     pivot_index = start
-    for i in range(start, end):
+    for i in range(pivot_index, end):
         if array[i] <= pivot:
             array[i], array[pivot_index] = array[pivot_index], array[i]
             pivot_index += 1
