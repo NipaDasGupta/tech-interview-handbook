@@ -6,7 +6,7 @@ def graph_topo_sort(num_nodes, edges):
     for node_id, pre_id in edges:
         nodes[node_id]['in'] += 1
         nodes[pre_id]['out'].add(node_id)
-    for node_id in nodes.keys():
+    for node_id in nodes:
         if nodes[node_id]['in'] == 0:
             queue.append(node_id)
     while len(queue):

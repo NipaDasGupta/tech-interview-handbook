@@ -41,10 +41,10 @@ union(parents, 4, 6)
 
 # Roots of 1, 2, 3 and 4, 5, 6 are the same
 print(find_root(parents, 0))
-print(list(find_root(parents, i) for i in (1, 2, 3)))
-print(list(find_root(parents, i) for i in (4, 5, 6)))
+print([find_root(parents, i) for i in (1, 2, 3)])
+print([find_root(parents, i) for i in (4, 5, 6)])
 
 # Merge 2, 4
 # -> [0], [1, 2, 3, 4, 5, 6]
 union(parents, 2, 4)
-print(list(find_root(parents, i) for i in (1, 2, 3, 4, 5, 6)))
+print([find_root(parents, i) for i in (1, 2, 3, 4, 5, 6)])
